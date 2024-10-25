@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white; /* Подчёркивание заголовка белой линией */
+    padding-bottom: 10px;
+}
+
+form {
+    background-color: #222; /* Темно-серый фон для формы */
+    padding: 20px;
+    border-radius: 0; /* Углы квадратные */
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для формы */
+    width: 400px; /* Ширина формы */
+    margin-left: auto; /* Центрировать форму */
+    margin-right: auto; /* Центрировать форму */
+}
+
+label {
+    display: block; /* Метки на новой строке */
+    margin: 10px 0 5px; /* Отступы */
+}
+
+input[type="text"],
+textarea {
+    width: 100%; /* Ширина полей ввода */
+    padding: 10px;
+    margin: 10px 0; /* Отступы */
+    border: 1px solid white; /* Белая граница */
+    border-radius: 0; /* Углы квадратные */
+    background-color: #333; /* Темный фон для полей */
+    color: white; /* Белый цвет текста */
+    transition: border-color 0.3s; /* Плавный переход */
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: gray; /* Цвет границы при фокусе */
+    outline: none; /* Убрать обводку */
+}
+
+button {
+    background-color: white; /* Белый фон для кнопки */
+    color: black; /* Чёрный цвет текста кнопки */
+    border: none;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 0; /* Углы квадратные */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    margin-top: 10px; /* Отступ сверху */
+    width: 100%; /* Ширина кнопки 100% */
+}
+
+button:hover {
+    background-color: gray; /* Цвет фона кнопки при наведении */
+    color: white; /* Белый цвет текста при наведении */
+}
+
+p {
+    margin-top: 20px; /* Отступ сверху для параграфа */
+}
+
+a {
+    color: white; /* Цвет ссылок белый */
+    text-decoration: none; /* Убрать подчёркивание */
+}
+
+a:hover {
+    color: gray; /* Цвет при наведении на ссылку */
+}

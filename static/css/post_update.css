@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #222; /* Темно-серый фон для контейнера */
+    width: 500px; /* Ширина контейнера */
+    margin: 50px auto; /* Центрирование по горизонтали */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 0; /* Квадратные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+}
+
+h1 {
+    text-align: center; /* Центрирование заголовка */
+    margin-bottom: 20px;
+}
+
+form.edit-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form.edit-form p {
+    margin-bottom: 15px; /* Отступы между полями формы */
+}
+
+button.btn {
+    background-color: white; /* Белый фон для кнопки */
+    color: black; /* Чёрный цвет текста кнопки */
+    border: none;
+    padding: 10px;
+    border-radius: 0; /* Квадратные углы кнопки */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: gray; /* Цвет при наведении */
+    color: white; /* Белый цвет текста при наведении */
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination .step-links {
+    list-style: none;
+}
+
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007bff; /* Цвет ссылки */
+}
+
+.pagination .current {
+    margin: 0 5px;
+    font-weight: bold;
+}

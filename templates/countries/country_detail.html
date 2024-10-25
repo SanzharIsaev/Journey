@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/country_detail.css' %}">
+    <title>{{ country.name }}</title>
+</head>
+<body>
+    <h1>{{ country.name }}</h1>
+    <h3><p>{{ country.description }}</p></h3>
+    <form method="post">
+        {% csrf_token %}
+        {% if is_following %}
+            <button type="submit" name="action" value="unfollow">Отписаться</button>
+        {% else %}
+            <button type="submit" name="action" value="follow">Подписаться</button>
+        {% endif %}
+    </form>
+    
+    <h2>Посты для {{ country.name }}</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <h4><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h4>
+                <p>Дата создания: {{ post.created_at|date:"d F Y H:i" }}</p> <!-- Форматирование даты -->
+            </li>
+        {% empty %}
+            <li>Посты отсутствуют.</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{% url 'country_list' %}">Список стран</a>
+</body>
+</html>

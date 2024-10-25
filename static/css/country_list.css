@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid white; /* Подчёркивание заголовка белой линией */
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0; /* Убрать отступы */
+}
+
+li {
+    margin: 10px 0; /* Отступы между элементами списка */
+}
+
+a {
+    text-decoration: none; /* Убрать подчёркивание */
+    color: white; /* Цвет ссылок белый */
+    transition: color 0.3s; /* Плавный переход для эффекта наведения */
+}
+
+a:hover {
+    color: gray; /* Цвет при наведении */
+}
+
+a:visited {
+    color: white; /* Цвет посещённых ссылок */
+}

@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый текст */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота экрана */
+}
+
+.login-container {
+    background-color: #222; /* Темно-серый фон контейнера */
+    padding: 40px;
+    border-radius: 0; /* Квадратные углы */
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+form.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form.login-form p {
+    margin-bottom: 15px;
+}
+
+button.btn {
+    background-color: white; /* Белый фон кнопки */
+    color: black; /* Чёрный текст кнопки */
+    padding: 10px;
+    border: none;
+    border-radius: 0; /* Квадратные углы */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btn:hover {
+    background-color: gray; /* Цвет при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+a {
+    color: white; /* Белые ссылки */
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray; /* Серый цвет ссылок при наведении */
+}
+
+.error-message {
+    background-color: #ff4d4d;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 0;
+}

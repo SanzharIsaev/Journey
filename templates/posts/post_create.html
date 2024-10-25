@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/post_create.css' %}">
+    <title>Создание поста</title>
+</head>
+    <body>
+        <h1>Создайте пост</h1>
+            {% if user.is_authenticated %}
+                <form action="{% url 'post_create' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <h4>Загрузить изображения</h4>
+                    {{ post_image_form.images }} 
+                    <button type="submit" class="btn btn-primary">Создать</button>
+                </form>
+                {% else %}
+                <p>Чтобы создать пост войдите в аккаунт или зарегестрируйте новый</p>
+                <a href="{% url 'login' %}">Войти</a> | 
+                <a href="{% url 'register' %}">Зарегестрироваться</a>
+            {% endif %}
+
+    </body>
+</html>

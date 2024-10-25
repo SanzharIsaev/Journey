@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/tag_detail.css' %}">
+    <title>Посты по тегу '{{ tag.name }}'</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Посты по тегу '{{ tag.name }}'</h1>
+
+        {% if posts %}
+            <ul class="post-list">
+                {% for post in posts %}
+                    <li class="post-item">
+                        <a href="{% url 'post_detail' post.id %}" class="post-title">{{ post.title }}</a> 
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
+        <form action="{% url is_following|yesno:'unfollow_tag,follow_tag' tag.id %}" method="post">
+            {% csrf_token %}
+            <button type="submit">
+                {% if is_following %}Отписаться{% else %}Подписаться{% endif %}
+            </button>
+        </form>
+    </div>
+</body>
+</html>

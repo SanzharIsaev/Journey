@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white; /* Подчёркивание заголовка белой линией */
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5; /* Интервал между строками */
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0; /* Убрать отступы */
+}
+
+li {
+    margin: 10px 0; /* Отступы между элементами списка */
+}
+
+a {
+    text-decoration: none; /* Убрать подчёркивание */
+    color: white; /* Цвет ссылок белый */
+    transition: color 0.3s; /* Плавный переход для эффекта наведения */
+}
+
+a:hover {
+    color: gray; /* Цвет при наведении */
+}
+
+a:visited {
+    color: white; /* Цвет посещённых ссылок */
+}
+
+footer {
+    margin-top: 20px; /* Отступ сверху для нижнего колонтитула */
+}

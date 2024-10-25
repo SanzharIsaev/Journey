@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/post_update.css' %}">
+    <title>Редактировать пост</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Редактировать пост</h1>
+        <form method="POST" class="edit-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {{ post_image_form.images }} 
+            <button type="submit" class="btn">Сохранить изменения</button>
+        </form>
+    </div>
+</body>
+</html>

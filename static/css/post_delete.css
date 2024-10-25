@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #222; /* Темно-серый фон для контейнера */
+    padding: 20px;
+    border-radius: 0; /* Квадратные углы */
+    width: 400px; /* Фиксированная ширина контейнера */
+    margin: 100px auto; /* Центрирование по вертикали и горизонтали */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+h1 {
+    font-size: 1.5em;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+button {
+    background-color: white; /* Белый фон для кнопки */
+    color: black; /* Чёрный цвет текста кнопки */
+    border: none;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 0; /* Квадратные углы кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    margin-right: 10px; /* Отступ справа */
+}
+
+button:hover {
+    background-color: gray; /* Цвет фона кнопки при наведении */
+    color: white; /* Белый цвет текста при наведении */
+}
+
+.cancel-link {
+    color: white; /* Белый цвет для ссылки отмены */
+    text-decoration: none; /* Убрать подчёркивание */
+}
+
+.cancel-link:hover {
+    color: gray; /* Цвет ссылки при наведении */
+}

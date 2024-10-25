@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/user_detail.css' %}">
+    <title>{{ user.username }}</title>
+</head>
+<body>
+    <h1>Профиль пользователя: {{ user.username }}</h1>
+    <p><strong>Количество постов:</strong> {{ user.post_set.count }}</p>
+    {% if is_following %}
+        <form action="{% url 'unfollow_user' user.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" style="display: block; margin: auto;">Отписаться</button>
+        </form>
+    {% else %}
+        <form action="{% url 'follow_user' user.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" style="display: block; margin: auto;">Подписаться</button>
+        </form>
+    {% endif %}
+    <h2>Посты пользователя</h2>
+    {% if posts_by_country %}
+        {% for country, posts in posts_by_country.items %}
+            <h3>{{ country }}</h3>
+            <ul>
+                {% for post in posts %}
+                    <li>
+                        <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

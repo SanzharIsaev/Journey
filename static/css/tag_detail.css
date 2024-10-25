@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center; /* Центрирование заголовка */
+    margin-bottom: 20px;
+    color: white;
+}
+
+ul.post-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+li.post-item {
+    background-color: #222; /* Темно-серый фон для каждого поста */
+    margin-bottom: 20px; /* Отступы между элементами списка */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 0; /* Квадратные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тени для постов */
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов внутри поста */
+    align-items: center;
+}
+
+a.post-title {
+    color: white; /* Цвет заголовка поста */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.2em; /* Размер заголовка */
+}
+
+a.post-title:hover {
+    color: gray; /* Цвет при наведении */
+}
+
+span.post-rating {
+    color: #ccc; /* Серый цвет для рейтинга */
+    font-size: 0.9em;
+}
+
+p {
+    text-align: center;
+}

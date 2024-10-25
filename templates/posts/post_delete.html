@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/post_delete.css' %}">
+    <title>Удалить пост</title>
+</head>
+<body>
+    <h1>Вы уверены, что хотите удалить пост "{{ post.title }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Удалить</button>
+        <a href="{% url 'post_detail' object.id %}">Отмена</a>
+    </form>
+</body>
+</html>

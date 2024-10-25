@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 80%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+}
+
+ul.post-list {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0;
+}
+
+.post-item {
+    background-color: #222; /* Темно-серый фон для каждого поста */
+    margin-bottom: 20px; /* Отступ между постами */
+    padding: 20px; /* Внутренние отступы */
+    border-radius: 0; /* Квадратные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для постов */
+}
+
+.post-title {
+    color: white; /* Цвет заголовка поста */
+    text-decoration: none; /* Убрать подчёркивание */
+    font-size: 1.5em; /* Размер заголовка */
+}
+
+.post-title:hover {
+    color: gray; /* Цвет заголовка при наведении */
+}
+
+.post-country {
+    color: white; /* Цвет ссылки на страну */
+    text-decoration: none; /* Убрать подчёркивание */
+}
+
+.post-country:hover {
+    color: gray; /* Цвет ссылки при наведении */
+}
+
+.tag {
+    background-color: #444; /* Темно-серый фон для тегов */
+    color: white; /* Белый цвет текста тегов */
+    padding: 5px 10px; /* Отступы внутри тегов */
+    margin-right: 5px; /* Отступ между тегами */
+    border-radius: 0; /* Квадратные углы тегов */
+    display: inline-block; /* Сделать теги блочными */
+}
+
+p {
+    margin: 10px 0; /* Отступы для абзацев */
+}

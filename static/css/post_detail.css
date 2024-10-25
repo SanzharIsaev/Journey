@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #222; /* Темно-серый фон для контейнера */
+    padding: 20px;
+    border-radius: 0; /* Квадратные углы */
+    width: 600px; /* Ширина контейнера */
+    margin: 20px auto; /* Центрирование по горизонтали */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для контейнера */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+h2, h3, h5 {
+    margin: 15px 0; /* Отступы для заголовков */
+}
+
+a {
+    color: white; /* Белый цвет для ссылок */
+    text-decoration: none; /* Убрать подчёркивание */
+}
+
+a:hover {
+    color: gray; /* Цвет при наведении */
+}
+
+.tag {
+    background-color: #444; /* Фон для тегов */
+    color: white; /* Цвет текста тегов */
+    padding: 5px 10px; /* Отступы внутри тегов */
+    margin-right: 5px; /* Отступ между тегами */
+    border-radius: 0; /* Квадратные углы для тегов */
+}
+
+.btn {
+    background-color: white; /* Белый фон для кнопки */
+    color: black; /* Чёрный цвет текста кнопки */
+    border: none;
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    border-radius: 0; /* Квадратные углы кнопки */
+    cursor: pointer; /* Указатель при наведении */
+    margin-right: 10px; /* Отступ между кнопками */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.btn:hover {
+    background-color: gray; /* Цвет фона кнопки при наведении */
+    color: white; /* Белый цвет текста при наведении */
+}
+
+.comments {
+    list-style-type: none; /* Убрать маркеры списка */
+    padding: 0; /* Убрать отступы */
+}
+
+.comments li {
+    margin-bottom: 10px; /* Отступы между комментариями */
+    background-color: #333; /* Темный фон для комментариев */
+    padding: 10px; /* Отступы внутри комментариев */
+    border-radius: 0; /* Квадратные углы */
+}

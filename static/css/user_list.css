@@ -1,0 +1,51 @@
+body {
+    background-color: black; /* Черный фон */
+    color: white; /* Белый текст */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px; /* Ограничение ширины для более компактного списка */
+}
+
+ul li {
+    background-color: #222; /* Темно-серый фон */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 0; /* Квадратные элементы */
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+ul li:hover {
+    background-color: #444; /* Светло-серый при наведении */
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+ul li a:hover {
+    color: gray; /* Изменение цвета ссылки при наведении */
+}
+
+ul li span {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #bbb;
+}

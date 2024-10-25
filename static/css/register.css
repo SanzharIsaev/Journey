@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black; /* Чёрный фон */
+    color: white; /* Белый цвет текста */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Высота на весь экран */
+}
+
+form {
+    background-color: #222; /* Темно-серый фон формы */
+    padding: 40px;
+    border-radius: 0; /* Квадратные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень для формы */
+    width: 300px;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+button.btn-success {
+    background-color: white; /* Белый фон кнопки */
+    color: black; /* Черный текст кнопки */
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 0; /* Квадратные углы */
+}
+
+button.btn-success:hover {
+    background-color: gray; /* Серый цвет при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 0; /* Квадратные углы */
+    background-color: #333; /* Темно-серый фон полей ввода */
+    color: white; /* Белый текст в полях ввода */
+}
+
+input:focus {
+    outline: none;
+    border-color: white; /* Белая рамка при фокусе */
+}
+
+label {
+    color: white; /* Цвет для меток формы */
+}

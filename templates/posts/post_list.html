@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/post_list.css' %}">
+    <title>Список постов</title>
+</head>
+<body>
+    <div class="container">
+            <ul class="post-list">
+                {% for post in posts %}
+                    <li class="post-item">
+                        <h2><a href="{% url 'post_detail' post.id %}" class="post-title">{{ post.title }}</a></h2>
+                        <h4>{{ post.body|truncatewords:5 }}</h4>
+                        <h5>{{ post.created_at }}</h5>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'post_detail' post.id %}">Чиать далее</a>
+                        {% else %}
+                            <a href="{% url 'login' %}">Чиать далее</a>
+                        {% endif %}
+                        <p>Страна: <a href="{% url 'country_detail' post.country.id %}" class="post-country">{{ post.country.name }}</a></p>
+                    </li>
+                {% endfor %}
+            </ul>
+    </div>
+</body>
+</html>
