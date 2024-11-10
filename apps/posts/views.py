@@ -53,7 +53,7 @@ class PostListView(views.View):
 class PostDetailView(generic.DetailView):
     """Детальное представление поста"""
     
-    model = Post
+
     template_name = 'posts/post_detail.html'
     
     def get_context_data(self, **kwargs):
@@ -74,6 +74,9 @@ class PostDetailView(generic.DetailView):
             return redirect('post_detail', pk=post.pk)
         else:
             return self.get(request, *args, **kwargs)
+
+    def get_object(self, queryset=None):
+        return get_object_or_404(Post.objects.filter(is_active=True).order_by('-created_at'))
 
 
 class PostCreateView(generic.CreateView):

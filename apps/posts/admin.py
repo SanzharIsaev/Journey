@@ -8,6 +8,7 @@ from .models import Post
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title', 'user', 'created_at', 'is_active']
     list_filter = ['user', 'created_at']
+    list_editable = ['is_active']
 
     def get_fields(self, request, obj=None):
         fields = super().get_fields(request, obj)

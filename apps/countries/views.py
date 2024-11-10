@@ -26,7 +26,7 @@ class CountryDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['is_following'] = FollowCountry.objects.filter(user=self.request.user, country=self.object).exists() if self.request.user.is_authenticated else False
         
-        context['posts'] = Post.objects.filter(country=self.object).order_by('-created_at')
+        context['posts'] = Post.objects.filter(country=self.object, is_active=True).order_by('-created_at')
         
         return context
 

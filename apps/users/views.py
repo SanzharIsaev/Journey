@@ -25,7 +25,7 @@ def user_list(request):
 def user_detail(request, user_id):
     """Представление страницы пользователя"""
     user = get_object_or_404(User, id=user_id)
-    posts = user.post_set.all()
+    posts = user.post_set.filter(is_active=True)
 
     posts_by_country = {}
     for post in posts:
